@@ -1,0 +1,42 @@
+/* sections */
+
+section {padding:$offset-2 0;}
+section:first-of-type {padding-top:0px;}
+
+.section-primary {
+    @include add-background($primary-color);
+}
+
+.section-primary-a {
+    @extend .section-primary;
+    @include add-border(4px,$secondary-color,top)
+}
+
+.section-primary-b {
+    @extend .section-primary;
+    @include add-border(4px,$secondary-color,bottom)
+}
+
+.section-secondary {
+    @include add-background($secondary-color);
+}
+
+.section-light {
+    @include add-background($light-color);
+}
+
+.section-dark {
+    @include add-background($dark-color);
+}
+
+/* dynamically loaded sections on scroll */
+.section-animate-enter {
+    -webkit-transition: 1.5s linear all;
+    transition: 1.5s linear all;
+    opacity: 0;
+    left: 100%;
+}
+.section-animate-enter.section-animate-enter-active {
+    opacity: 1;
+    left: 0;
+}

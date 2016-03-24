@@ -1,0 +1,35 @@
+body{
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-font-line-height;
+    color:$base-font-color;
+    padding-top:68px;
+}
+section.hide {display:none;border-bottom:5px solid #000;}
+.breadcrumb {background:#fff;margin-bottom:0;}
+a {
+    color:$hyperlink-color;
+}
+a:hover {
+    color:$hyperlink-color-hover;
+    text-decoration: underline;
+}
+a:focus,a:active {
+    color:$hyperlink-color-active;
+}
+.cursor-pointer {cursor:pointer;}
+
+ul,li {margin:0;padding:0;list-style: none;}
+
+input,textarea,button{
+    @include border-radius(0px);
+}
+
+img.device {
+    width:100%;
+}
+
+img.device-small {
+    width:70%;
+    margin-bottom:-40px;
+}

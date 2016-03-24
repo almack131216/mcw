@@ -1,0 +1,21 @@
+<div class="block block-primary" ng-controller="block_3Ctrl">
+    <h3><a href="/" ng-bind="title"></a></h3>
+    
+    <ul class="boxWrap">
+        <li ng-repeat="photo in sales" class="row imgWithTextRow">              
+				<a href="/">
+                <span class="col-xs-4 col-sm-3 col-md-4 margin-0 padding-0 img-sq">
+                    <img class="lazyload" data-src="{{ imgDir + photo.image_large }}" alt="{{ photo.name }}">
+                </span>
+            
+                <span class="col-xs-8 col-sm-9 col-md-8">
+                    <h4 ng-bind="photo.name"></h4>
+                    <div class="hidden-xxxs visible-sm visible-xs snippetWrap" ng-bind-html="photo.snippet | html"></div>
+<!--                    <span ng-bind="photo.year"></span> &#124; -->
+                    <span ng-bind="photo.price | currency:'£':0"></span>
+                </span>
+</a>
+        </li>
+    </ul>
+
+</div>

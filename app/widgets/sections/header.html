@@ -1,0 +1,87 @@
+<nav id="navbar-main" class="[ navbar ][ navbar-bootsnipp animate ]" role="navigation" ng-controller="navCtrl">
+    <div class="[ container ]">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="[ navbar-header ]">
+            <button type="button" class="[ navbar-toggle ]" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="[ sr-only ]">Toggle navigation</span>
+                <span class="[ icon-bar ]"></span>
+                <span class="[ icon-bar ]"></span>
+                <span class="[ icon-bar ]"></span>
+            </button>
+            <div class="[ animbrand ]">
+                <a class="[ navbar-brand ]" ui-sref="home" ng-bind="title"></a>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="[ collapse navbar-collapse ]" id="bs-example-navbar-collapse-1">
+            <ul class="[ nav navbar-nav navbar-right ]">
+<!--
+                <li class="[ visible-xs ]">
+                    <form action="/" method="GET" role="search">
+                        <div class="[ input-group ]">
+                            <input type="text" class="[ form-control ]" name="q" placeholder="Search for...">
+                            <span class="[ input-group-btn ]">
+                                <button class="[ btn btn-primary ]" type="submit"><i class="fa fa-search"></i></button>
+                                <button class="[ btn btn-primary ]" type="reset"><i class="fa fa-times color-danger"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+-->
+                <li class="dropdown-right">
+                    <a class="[ dropdown-toggle ] cursor-pointer" data-toggle="dropdown">Malton Coachworks <span class="[ caret ]"></span></a>
+                    <ul class="[ dropdown-menu ]" role="menu">
+                        <li><a href="#" ui-sref="about">About Malton Coachworks</a></li>
+                        <li><a href="#" ui-sref="staff">Meet the Staff</a></li>
+                        <li><a href="#" ui-sref="facilities">Our Facilities</a></li>
+                        <li><a href="#" ui-sref="press">Press Releases</a></li>
+                        <li><a href="#" ui-sref="testimonials">Customer Testimonials</a></li> 
+                        <li class="hidden-lg"><a class="" ui-sref="portfolio">Restoration Portfolio</a></li>
+                        <li class="hidden-lg"><a class="" ui-sref="contact">Contact us</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-right">
+                    <a class="[ dropdown-toggle ] cursor-pointer" data-toggle="dropdown">Services <span class="[ caret ]"></span></a>
+                    <ul class="[ dropdown-menu ]" role="menu">
+                        <li><a href="#">Full Restorations</a></li>
+                        <li><a href="#">Full or Partial Resprays</a></li>
+                        <li><a href="#">Modifications & Upgrades</a></li>
+                        <li><a href="#">Panel Repairs</a></li>
+                        <li><a href="#">Private & Insurance</a></li>
+                        <li><a href="#">Bodykits, Accessories, Custom paint</a></li>
+                        <li><a ui-sref="portfolio">Restoration Portfolio</a></li>
+                    </ul>
+                </li>                
+                <li class="hidden-sm"><a class="" ui-sref="portfolio">Portfolio</a></li>
+                <li class="hidden-sm"><a class="" ui-sref="contact">Contact</a></li>
+                <li class="visible-xs"><a class="dropdown-close" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i class="fa fa-chevron-up"></i></a></li>
+<!--
+                <li class="[ hidden-xs ]">
+                    <a href="#toggle-search" class="btn-search"><i class="fa fa-search"></i></a>
+                </li>
+-->
+            </ul>
+        </div>
+    </div>
+<!--
+    <div class="[ bootsnipp-search animate ]">
+        <div class="[ container ]">
+            <form action="http://bootsnipp.com/search" method="GET" role="search">
+                <div class="[ input-group ]">
+                    <input type="text" class="[ form-control ]" name="q" placeholder="Search for...">
+                    <span class="[ input-group-btn ]">
+                        <button class="[ btn btn-danger ]" type="reset"><i class="fa fa-times "></i></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+-->
+</nav>
+<!--
+<script>
+    jQuery(document).ready(function($) {
+      loadSearch();
+    });
+</script>-->

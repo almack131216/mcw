@@ -1,0 +1,22 @@
+/* featurebox.scss */
+
+.featurebox {
+    padding:0;
+
+    h4 {color:#000;font-weight:bold;}
+    p {color:#666;margin-bottom:0;}
+    
+    .imgArea {
+        padding:0;
+        
+        img {
+            width:100%;height:auto;
+        }
+    }
+    
+    .txtArea {
+        padding:$offset-2;text-align:left;
+    }
+    
+    a:hover {text-decoration:none;}
+}

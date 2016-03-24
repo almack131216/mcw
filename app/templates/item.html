@@ -1,0 +1,31 @@
+<section class="section-main" ng-controller="itemDetailsCtrl">
+    
+    <div class="container">        
+        
+        <div class="row margin-bottom-2">
+            <div class="col-xxs-12 col-xs-6 col-sm-8">
+                <h1 ng-bind="productParent.name"></h1>
+                <p><strong ng-bind="productParent.snippetFull"></strong></p>
+                <p ng-bind-html="productParent.description"></p>
+            </div>
+            
+            <div class="col-xxs-12 col-xs-6 col-sm-4">
+                <div class="block block-light">
+                    <h3><a href="/portfolio" ng-bind="title"></a></h3>
+
+                    <ul class="row boxWrap" id="links">
+                        <li ng-repeat="subItem in product" class="img-sq col-md-4 col-xs-4">
+                            <a ng-href="{{ imgDirLarge + subItem.image_large }}" title="{{ subItem.name }}" data-gallery>
+                                <img class="boxThumb lazyload" ng-src="{{ imgDirThumb + subItem.image_large || 'app/img/_missing-image.jpg' }}" alt="{{ subItem.name }}">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    
+</section>

@@ -1,0 +1,12 @@
+<div class="block block-primary" ng-controller="block_1Ctrl">
+    <h3><a href="/portfolio" ng-bind="title"></a></h3>
+    
+    <ul class="row boxWrap" id="block_1_links">
+        <li ng-repeat="photo in photos" class="img-sq col-md-4 col-xs-4">
+            <a ng-href="{{ imgDirLarge + photo.image_large }}" title="{{ photo.name }}" data-gallery="#blueimp-gallery-block_1_links">
+                <img class="boxThumb lazyload" data-src="{{ imgDir + photo.image_large || 'app/img/_missing-image.jpg' }}" alt="{{ photo.name }}">
+            </a>
+        </li>
+    </ul>
+
+</div>

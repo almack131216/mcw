@@ -1,0 +1,14 @@
+<section ng-include="'app/widgets/sections/banner.html'"></section>
+<section ng-include="'app/widgets/sections/intro.html'"></section>
+
+<div class="homeCtrl" ng-controller="homeCtrl">
+<section
+    ng-repeat="section in loadedSections"
+    ng-include="'app/widgets/sections/'+section+'.html'"
+    scroll-load
+    scroll-load-from="sections"
+    scroll-load-to="loadedSections"
+    ng-animate="{enter:'section-animate-enter'}"
+    >
+</section>
+</div>

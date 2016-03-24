@@ -1,0 +1,49 @@
+/* featurebox.scss */
+
+.featurebox {
+    padding:0;
+    
+    .row {margin:0px !important;}
+
+    h4 {color:#000;font-weight:bold;}
+    p {color:#666;margin-bottom:0;}
+    
+    .imgArea {
+        padding:0;
+        
+        img {
+            width:100%;height:auto;
+        }
+    }
+    
+    .txtArea {
+        padding:$offset-2;text-align:left;
+    }
+    
+    a:hover {text-decoration:none;}
+}
+
+
+/* md */
+@media (min-width: 992px) {
+    .featureboxGrid .featureboxWrap:nth-child(4n+1) {
+        clear:left;
+    }
+}
+
+@media (min-width:481px) and (max-width:991px){
+    .featureboxGrid .featureboxWrap:nth-child(2n+1) {
+        clear:left;
+    }
+}
+
+@media (min-width:320px) and (max-width:480px){
+    
+    .featurebox {
+        h4 {margin-bottom:$offset-0-5;}
+        .txtArea {padding:$offset-1 $offset-1-5;}
+    }
+    .featurebox.block-white {
+        .txtArea {padding-top:$offset-0;}
+    }
+}

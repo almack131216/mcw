@@ -1,0 +1,24 @@
+/* navbar-search Tweaks */
+
+.navbar-bootsnipp .navbar-nav > li:not(.disabled).open > a,
+.navbar-bootsnipp .navbar-nav > li:not(.disabled).active > a,
+.navbar-bootsnipp .navbar-nav > li:not(.disabled) > a {
+//    @include add-border(4px, $secondary-color, 'bottom');
+//    border-left-width: 0px;
+//    padding-bottom: 16px;
+//    padding-left:$offset-1;
+//    padding-right:$offset-1;
+    border:0px;
+}
+
+/* SEARCH */
+.navbar-bootsnipp .bootsnipp-search .input-group-btn {
+    padding:0px !important;
+}
+.navbar-bootsnipp .navbar-nav > li > a.btn-search {
+    padding:$offset-2 $offset-1-5 !important;
+}
+.navbar-bootsnipp .bootsnipp-search .input-group-btn > .btn {
+    padding:$offset-1-5 !important;
+}
+

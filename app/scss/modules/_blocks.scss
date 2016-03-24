@@ -1,0 +1,73 @@
+/* Blocks */
+
+.block {
+    padding:$offset-1-5;
+    margin-bottom:$offset-1-5;
+    
+    
+    h3{
+        margin-top:0;
+        padding-top:0;
+        
+    }
+    
+    h3,h4 {font-weight:bold;}
+}
+
+.block.isPortfolioBlock {background:yellow;}
+.block.isStaffBlock {background:green;}
+
+.block-white{
+    @extend .block;
+    @include add-background('#fff');
+}
+
+.block-primary{
+    @extend .block;
+    @include add-background($primary-color);
+    
+    a {color:#fff;}
+}
+
+.block-secondary{
+    @extend .block;
+    @include add-background($secondary-color);
+    
+    a {color:#fff;}
+}
+
+.block-light{
+    @extend .block;
+    @include add-background($light-color);
+}
+
+.block-dark{
+    @extend .block;
+    @include add-background($dark-color);
+}
+
+.block-center {
+    text-align:center !important;
+}
+
+.block-image img {
+    width:100%;
+}
+
+.block-border {
+    @include add-border(1px,#000,all)
+}
+
+.block-primary-head {    
+    h3{
+        padding:$offset-1-5;
+        @include add-background($primary-color);
+        margin:0;
+        font-size:18px;
+    }
+
+    .block-content {
+        @include add-border(1px, $primary-color, all);
+        padding:$offset-1-5;
+    }
+}

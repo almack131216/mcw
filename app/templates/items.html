@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row margin-bottom-2">
+        <div class="col-md-12 txt-align-center">
+            <h1 ng-bind="title"></h1>
+            <div ng-if="categoryID==6" ng-bind="message | htmlToPlaintext"></div>
+        </div>
+    </div>
+
+    <div class="row featureboxGrid">
+        <div class="col-xxxs-12 col-xs-6 col-md-3 featureboxWrap" ng-repeat="item in products">
+            <div class="block block-white featurebox" ng-class="{6:'isPortfolioBlock',8:'isStaffBlock'}[item.categoryID]">
+                <a ui-sref="product({id: item.id, name: sanitizeURL(item.name), list: itemParent })">
+                    <div class="row margin-0">
+                        <div class="imgArea col-xxxs-4 img-sq img-4x3">
+                            
+                            <img
+    data-sizes="auto"
+    data-src="{{ imgDir + item.image_large }}"
+    data-srcset="{{ imgDir + item.image_large }} 300w,
+    {{ imgDirLarge + item.image_large }} 600w,
+    {{ imgDirLarge + item.image_large }} 900w" class="lazyload" />
+                            
+                        </div>
+                        <div class="txtArea col-xxxs-8 padding-x-0">
+                            <h4 ng-bind="item.name"></h4>
+                            <div ng-if="categoryID==6">
+                                <p ng-bind="item.snippet | htmlToPlaintext" class="snippet"></p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>

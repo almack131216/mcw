@@ -1,0 +1,37 @@
+<h1>Portfolio List</h1>
+<section class="section-main" ng-controller="portfolioListCtrl">
+    
+    
+<div class="container">
+    <div class="row margin-bottom-2">
+        <div class="col-md-12 txt-align-center">
+            <h1>Restoration Portfolio List</h1>
+            <p>Here is a small selection of work carried out by us. Whether it be accident repairs, minor paintwork improvements, vehicle modifications or body restoration, we have the experience and expertise.</p>
+<!--            <p>Our portfolio displays the wide variety of work we are able to offer.</p>-->
+        </div>
+    </div>
+
+    <div class="row featureboxGrid">
+        <div class="col-xxxs-12 col-xs-6 col-md-3 featureboxWrap" ng-repeat="item in products">
+            <div class="block block-white featurebox isPortfolio">
+                <a ui-sref="portfolio.product({id: item.id})">
+                    <div class="row margin-0">
+<!--
+                        <div class="imgArea col-xxxs-4 img-sq img-4x3">
+                            <img class="lazyload" data-src="{{ imgDir + item.image_large || 'app/img/_missing-image.jpg' }}" alt="{{ item.name }}">
+                        </div>
+-->
+                        <div class="txtArea padding-x-0 col-xxxs-8">
+                            <h4 ng-bind="item.name"></h4>
+<!--                            <p ng-bind="item.snippet | htmlToPlaintext">...</p>-->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+<!---->
+</section>

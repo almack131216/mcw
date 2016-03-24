@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head ng-controller="headCtrl">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+        <!--    <title ng-bind="meta_title"></title>-->
+        <title ncy-breadcrumb-last="Malton Coachworks: {{ncyBreadcrumbLabel}}"></title>
+        <meta name="keywords" content="{{ meta_keywords }}">
+        <meta name="description" content="{{ meta_description }}">
+        <meta name="author" content="{{ meta_author }}">
+        <meta charset="UTF-8">
+        <link rel="icon" href="favicon.ico">
+      
+        <style>      
+        /* hide blueimp-gallery to avoid naked buttons showing during load */
+        /* blueimp-gallery-display - this class is added when gallry is required - now we can see it */
+        /* blueimp-gallery-controls - this class is added to show overlays on gallery */
+        .blueimp-gallery{display: none;}            
+        </style>
+      
+  </head>
+
+  <body>
+
+    <header ng-include="'app/widgets/sections/header.html'"></header>
+    <section ng-class="{hide: $state.includes('home')}"><div class="container"><div ncy-breadcrumb></div></div></section>
+    <ui-view></ui-view>
+    <footer ng-include="'app/widgets/sections/footer.html'"></footer>
+    
+      
+
+     <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <!--<div id="blueimp-gallery" class="blueimp-gallery">-->
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body next"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-primary next">
+                            Next
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+      
+      
+    <!-- JS
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="app/js/angular.js"></script>
+    <script src="app/js/angular-ui-router.js"></script>
+    <script src="app/js/angular-breadcrumb.js"></script>
+    <script src="app/js/angular-sanitize.js"></script>
+      
+    <script src="app/js/app.js"></script>
+    <script src="app/js/sections.js"></script>
+    <script src="app/js/controllers.js"></script>
+    <script src="app/js/filters.js"></script>
+    <script src="app/js/navbar-search.js"></script>
+    <script src="app/js/common.js"></script>
+    <script src="app/js/lazysizes.js"></script>
+
+    <!-- Bluimp-Gallery: JS -->
+    <script src="app/js/blueimp/jquery.blueimp-gallery.min.js"></script>
+<!--    <script src="app/js/blueimp/bootstrap-image-gallery.min.js"></script>-->
+    
+      
+    
+    
+    <!-- CSS -->
+    <link href="app/css/bootstrap.css" rel="stylesheet">    
+    <link href="dist/css/font-awesome.min.css" rel="stylesheet">
+    <link href="app/css/main.css" rel="stylesheet">
+      
+    <!-- Bluimp-Gallery: CSS -->
+    <link rel="stylesheet" href="app/css/blueimp/blueimp-gallery.css">
+    <link rel="stylesheet" href="app/css/blueimp/blueimp-gallery-video.css">
+      
+  </body>
+</html>

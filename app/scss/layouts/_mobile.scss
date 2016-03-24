@@ -1,0 +1,46 @@
+/* _mobile.scss */
+
+@media (min-width: 992px){
+    
+}
+
+@media (max-width:768px){
+    h1,.h1 {font-size:30px;}
+    
+    .search {}0    
+    
+    .footer-main {
+        h3 {}
+        
+        ul {
+            display:block;
+            margin-bottom:$offset-2;      
+        }
+        
+    }
+    
+}
+
+/* md */
+@media (min-width: 992px) {
+}
+
+@media (min-width:481px) and (max-width:991px){
+}
+
+@media (min-width:320px) and (max-width:480px){
+    body {}
+    
+    .footer-main li {line-height:2.4em;}
+}
+
+/* lg */
+@media (min-width: 1200px) {}
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {}
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {}
+/* xs */
+@media (max-width: 767px) {}
+
+

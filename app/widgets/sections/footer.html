@@ -1,0 +1,48 @@
+<footer class="footer-main" ng-controller="footerCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <h3 ng-bind="company_name"></h3>
+                <ul>
+                    <li><a href="#">About Malton Coachworks</a></li>
+                    <li><a href="#">Meet the Staff</a></li>
+                    <li><a href="#">Our Facilities</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Customer Testimonials</a></li>
+                    <li><a href="#">Get a Quote</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-4">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Full Restorations</a></li>
+                    <li><a href="#">Full or Partial Resprays</a></li>
+                    <li><a href="#">Modifications & Upgrades</a></li>
+                    <li><a href="#">Panel Repairs</a></li>
+                    <li><a href="#">Private & Insurance</a></li>
+                    <li><a href="#">Bodykits, Accessories, Custom paint</a></li>
+                    <li><a href="#">View our Portfolio</a></li>
+                </ul>
+            </div>            
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="tel:+441653692090"><i class="fa fa-phone margin-right-1"></i>{{ company_telephone }}</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o margin-right-1"></i>{{ company_email }}</a></li>
+<!--                    <li><a href="#"><i class="fa fa-globe margin-right-1"></i>{{ company_web.replace('www.', '')}}</a></li>-->
+                    <li>
+                        <ul class="socialise">
+                            <li class="facebook"><a href="https://www.facebook.com/maltoncoachworks" title="Link to our facebook page in new window" target="_blank"><i class="fa fa-facebook"></i><span>facebook</span></a></li>
+                            <li class="twitter"><a href="https://twitter.com/maltoncoachwork" title="Link to our twitter page in new window" target="_blank"><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+                            <li class="linkedin"><a href="http://www.linkedin.com/pub/malton-coachworks/83/808/797" title="Link to our linkedin page in new window" target="_blank"><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                            <li class="youtube"><a href="http://www.youtube.com/channel/UCyT2-bypDjmWDTChx2Cl3uA" title="Link to our YouTube page in new window" target="_blank"><i class="fa fa-youtube"></i><span>YouTube</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-map-marker margin-right-1"></i>{{ company_address + ', ' + company_postcode }}</a></li>
+                </ul>
+            </div>
+
+        </div>
+      </div>
+  </footer>
