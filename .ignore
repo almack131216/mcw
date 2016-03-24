@@ -66,6 +66,8 @@ Thumbs.db
 # Folders #
 ###########
 ASSETS/*
+app/img-cms/*
+app/img-cms-csc/*
 
 # Documents #
 #############
